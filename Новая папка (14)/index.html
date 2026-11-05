@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        //------------------------Задание 1-----------------------
+        let obj = {
+            price1: 100,
+            price2: 150,
+            price3: 200,
+            price4: 100,
+            price5: 150,
+        }
+
+        function sumObjectValues(obj) {
+            const values = Object.values(obj);
+            let total = 0;
+
+            values.map(value => {
+                total += value;
+            });
+
+            return total;
+        }
+        const result = sumObjectValues(obj);
+        console.log(result);
+        //------------------------Задание 2-----------------------
+        let array = [
+            { id: 1, name: 'apple' },
+            { id: 2, name: 'watermelon' },
+            { id: 3, name: 'qiwi' },
+            { id: 4, name: 'lemon' }
+        ]
+
+        let result2 = array.map(obj => Object.values(obj));
+        console.log(result2);
+
+        //------------------------Задание 3-----------------------
+
+        function logString(arr) {
+            const result = arr.join(' ');
+            console.log(result);
+        }
+        logString(["Hello", "my", "world!"])
+
+        //------------------------Задание 4-----------------------
+
+        function сheckObj(obj) {
+            return 'particle' in obj;
+        }
+
+        console.log(сheckObj({ id: 1, particle: true }));
+        console.log(сheckObj({ id: 2, name: "tag" }));
+
+
+
+    </script>
+
+</body>
+
+</html>
